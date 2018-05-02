@@ -10,6 +10,11 @@
 		F64F82D72099D5E6006C809E /* SwiftGenericCells.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64F82CD2099D5E6006C809E /* SwiftGenericCells.framework */; };
 		F64F82DE2099D5E6006C809E /* SwiftGenericCells.h in Headers */ = {isa = PBXBuildFile; fileRef = F64F82D02099D5E6006C809E /* SwiftGenericCells.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F64F82EA2099DE86006C809E /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64F82E92099DE86006C809E /* SnapKit.framework */; };
+		F64F82EE2099E25C006C809E /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F82ED2099E25C006C809E /* UITableView.swift */; };
+		F64F82F12099FC54006C809E /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F82F02099FC54006C809E /* TitleTableViewCell.swift */; };
+		F64F82F42099FC98006C809E /* TitleTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F82F32099FC98006C809E /* TitleTableViewCellTest.swift */; };
+		F64F82F62099FE0C006C809E /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64F82E92099DE86006C809E /* SnapKit.framework */; };
+		F64F8322209A2905006C809E /* ReusableCellSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8321209A2905006C809E /* ReusableCellSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		F64F82D62099D5E6006C809E /* SwiftGenericCellsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGenericCellsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64F82DD2099D5E6006C809E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F64F82E92099DE86006C809E /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		F64F82ED2099E25C006C809E /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		F64F82F02099FC54006C809E /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		F64F82F32099FC98006C809E /* TitleTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCellTest.swift; sourceTree = "<group>"; };
+		F64F831F209A062E006C809E /* SwiftTryCatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTryCatch.framework; path = Carthage/Build/iOS/SwiftTryCatch.framework; sourceTree = "<group>"; };
+		F64F8321209A2905006C809E /* ReusableCellSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCellSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F64F82D72099D5E6006C809E /* SwiftGenericCells.framework in Frameworks */,
+				F64F82F62099FE0C006C809E /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,8 +84,11 @@
 		F64F82CF2099D5E6006C809E /* SwiftGenericCells */ = {
 			isa = PBXGroup;
 			children = (
+				F64F82EF2099FC33006C809E /* SimpleTableViewCells */,
+				F64F82EC2099E237006C809E /* UIKitExtensions */,
 				F64F82D02099D5E6006C809E /* SwiftGenericCells.h */,
 				F64F82D12099D5E6006C809E /* Info.plist */,
+				F64F8321209A2905006C809E /* ReusableCellSource.swift */,
 			);
 			path = SwiftGenericCells;
 			sourceTree = "<group>";
@@ -82,6 +96,7 @@
 		F64F82DA2099D5E6006C809E /* SwiftGenericCellsTests */ = {
 			isa = PBXGroup;
 			children = (
+				F64F82F22099FC6B006C809E /* SimpleTableViewCellsTests */,
 				F64F82DD2099D5E6006C809E /* Info.plist */,
 			);
 			path = SwiftGenericCellsTests;
@@ -90,9 +105,34 @@
 		F64F82E82099DE86006C809E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F64F831F209A062E006C809E /* SwiftTryCatch.framework */,
 				F64F82E92099DE86006C809E /* SnapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F64F82EC2099E237006C809E /* UIKitExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				F64F82ED2099E25C006C809E /* UITableView.swift */,
+			);
+			path = UIKitExtensions;
+			sourceTree = "<group>";
+		};
+		F64F82EF2099FC33006C809E /* SimpleTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F64F82F02099FC54006C809E /* TitleTableViewCell.swift */,
+			);
+			path = SimpleTableViewCells;
+			sourceTree = "<group>";
+		};
+		F64F82F22099FC6B006C809E /* SimpleTableViewCellsTests */ = {
+			isa = PBXGroup;
+			children = (
+				F64F82F32099FC98006C809E /* TitleTableViewCellTest.swift */,
+			);
+			path = SimpleTableViewCellsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +176,7 @@
 				F64F82D22099D5E6006C809E /* Sources */,
 				F64F82D32099D5E6006C809E /* Frameworks */,
 				F64F82D42099D5E6006C809E /* Resources */,
+				F64F82F52099FDB0006C809E /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -159,9 +200,11 @@
 				TargetAttributes = {
 					F64F82CC2099D5E6006C809E = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					F64F82D52099D5E6006C809E = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -230,6 +273,22 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
+		F64F82F52099FDB0006C809E /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -237,6 +296,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F64F8322209A2905006C809E /* ReusableCellSource.swift in Sources */,
+				F64F82F12099FC54006C809E /* TitleTableViewCell.swift in Sources */,
+				F64F82EE2099E25C006C809E /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F64F82F42099FC98006C809E /* TitleTableViewCellTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +444,7 @@
 		F64F82E22099D5E6006C809E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -402,6 +466,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SwiftGenericCells;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -410,6 +475,7 @@
 		F64F82E32099D5E6006C809E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -439,8 +505,14 @@
 		F64F82E52099D5E6006C809E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MDX989Y6D8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftGenericCellsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,6 +521,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SwiftGenericCellsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -457,8 +530,14 @@
 		F64F82E62099D5E6006C809E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MDX989Y6D8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SwiftGenericCellsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
