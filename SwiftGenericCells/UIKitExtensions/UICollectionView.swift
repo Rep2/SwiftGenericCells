@@ -1,17 +1,17 @@
 import UIKit
 
-extension UITableView {
+extension UICollectionView {
     /**
      Registers a reusable "cell" using `CustomStringConvertible` as the reuese identifier.
 
      - Important: Call before `dequeueReusableCell(for:)` to avoid `NSInternalInconsistencyException`.
      */
-    public func register<T: UITableViewCell>(cell: T.Type, reusableCellSource: ReusableCellSource) {
+    public func register<T: UICollectionViewCell>(cell: T.Type, reusableCellSource: ReusableCellSource) {
         switch reusableCellSource {
         case .nib:
-            register(UINib(nibName: String(describing: cell), bundle: nil), forCellReuseIdentifier: String(describing: cell))
+            register(UINib(nibName: String(describing: cell), bundle: nil), forCellWithReuseIdentifier: String(describing: cell.self))
         case .class:
-            register(T.self, forCellReuseIdentifier: String(describing: cell.self))
+            register(cell, forCellWithReuseIdentifier: String(describing: cell.self))
         }
     }
 
@@ -20,7 +20,7 @@ extension UITableView {
 
      - Important: Force unwraps the "cell". Causes the app to crashes with `NSInternalInconsistencyException` if the cell type isn't registered.
      */
-    public func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T {
+    public func dequeueReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T {
         return dequeueReusableCell(for: indexPath)!
     }
 
@@ -29,7 +29,7 @@ extension UITableView {
 
      - Important: Causes the app to crashes with `NSInternalInconsistencyException` if the cell type isn't registered.
      */
-    public func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T? {
-        return dequeueReusableCell(withIdentifier: String(describing: T.self), for: indexPath) as? T
+    public func dequeueReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T? {
+        return dequeueReusableCell(withReuseIdentifier: String(describing: T.self), for: indexPath) as? T
     }
 }

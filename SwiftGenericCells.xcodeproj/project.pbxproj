@@ -15,6 +15,9 @@
 		F64F82F42099FC98006C809E /* TitleTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F82F32099FC98006C809E /* TitleTableViewCellTest.swift */; };
 		F64F82F62099FE0C006C809E /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64F82E92099DE86006C809E /* SnapKit.framework */; };
 		F64F8322209A2905006C809E /* ReusableCellSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8321209A2905006C809E /* ReusableCellSource.swift */; };
+		F64F8324209A2AED006C809E /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8323209A2AED006C809E /* UICollectionView.swift */; };
+		F64F8327209A2BA6006C809E /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8326209A2BA6006C809E /* TitleCollectionViewCell.swift */; };
+		F64F832A209A2BD0006C809E /* TitleCollectionViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8329209A2BD0006C809E /* TitleCollectionViewCellTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 		F64F82F32099FC98006C809E /* TitleTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCellTest.swift; sourceTree = "<group>"; };
 		F64F831F209A062E006C809E /* SwiftTryCatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTryCatch.framework; path = Carthage/Build/iOS/SwiftTryCatch.framework; sourceTree = "<group>"; };
 		F64F8321209A2905006C809E /* ReusableCellSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCellSource.swift; sourceTree = "<group>"; };
+		F64F8323209A2AED006C809E /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		F64F8326209A2BA6006C809E /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		F64F8329209A2BD0006C809E /* TitleCollectionViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCellTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 		F64F82CF2099D5E6006C809E /* SwiftGenericCells */ = {
 			isa = PBXGroup;
 			children = (
+				F64F8325209A2B89006C809E /* SimpleCollectionViewCells */,
 				F64F82EF2099FC33006C809E /* SimpleTableViewCells */,
 				F64F82EC2099E237006C809E /* UIKitExtensions */,
 				F64F82D02099D5E6006C809E /* SwiftGenericCells.h */,
@@ -96,6 +103,7 @@
 		F64F82DA2099D5E6006C809E /* SwiftGenericCellsTests */ = {
 			isa = PBXGroup;
 			children = (
+				F64F8328209A2BC0006C809E /* SimpleCollectionViewCells */,
 				F64F82F22099FC6B006C809E /* SimpleTableViewCellsTests */,
 				F64F82DD2099D5E6006C809E /* Info.plist */,
 			);
@@ -115,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				F64F82ED2099E25C006C809E /* UITableView.swift */,
+				F64F8323209A2AED006C809E /* UICollectionView.swift */,
 			);
 			path = UIKitExtensions;
 			sourceTree = "<group>";
@@ -133,6 +142,22 @@
 				F64F82F32099FC98006C809E /* TitleTableViewCellTest.swift */,
 			);
 			path = SimpleTableViewCellsTests;
+			sourceTree = "<group>";
+		};
+		F64F8325209A2B89006C809E /* SimpleCollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F64F8326209A2BA6006C809E /* TitleCollectionViewCell.swift */,
+			);
+			path = SimpleCollectionViewCells;
+			sourceTree = "<group>";
+		};
+		F64F8328209A2BC0006C809E /* SimpleCollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F64F8329209A2BD0006C809E /* TitleCollectionViewCellTest.swift */,
+			);
+			path = SimpleCollectionViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +323,8 @@
 			files = (
 				F64F8322209A2905006C809E /* ReusableCellSource.swift in Sources */,
 				F64F82F12099FC54006C809E /* TitleTableViewCell.swift in Sources */,
+				F64F8327209A2BA6006C809E /* TitleCollectionViewCell.swift in Sources */,
+				F64F8324209A2AED006C809E /* UICollectionView.swift in Sources */,
 				F64F82EE2099E25C006C809E /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F64F82F42099FC98006C809E /* TitleTableViewCellTest.swift in Sources */,
+				F64F832A209A2BD0006C809E /* TitleCollectionViewCellTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

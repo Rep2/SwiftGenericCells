@@ -1,5 +1,5 @@
 /// Reusable cell source
-enum ReusableCellSource {
+public enum ReusableCellSource {
     case nib
     case `class`
 }

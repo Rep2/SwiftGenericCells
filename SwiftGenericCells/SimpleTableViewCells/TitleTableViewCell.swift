@@ -1,3 +1,3 @@
 import UIKit
 
-class TitleTableViewCell: UITableViewCell {}
+public class TitleTableViewCell: UITableViewCell {}
