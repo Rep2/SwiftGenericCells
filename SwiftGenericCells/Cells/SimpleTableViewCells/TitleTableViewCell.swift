@@ -10,7 +10,11 @@ public struct TitleTableViewCellViewModel {
     }
 }
 
-public class TitleTableViewCell: UITableViewCell {
+public class TitleTableViewCell: UITableViewCell, ViewModelPresenter {
+    typealias ViewModel = TitleTableViewCellViewModel
+
+    let source = ViewSource.class
+
     lazy var titleLabel: UILabel = {
         return UILabel()
     }()

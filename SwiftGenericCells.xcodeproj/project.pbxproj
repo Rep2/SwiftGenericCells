@@ -17,6 +17,9 @@
 		F64F8322209A2905006C809E /* ReusableCellSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8321209A2905006C809E /* ReusableCellSource.swift */; };
 		F64F8324209A2AED006C809E /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8323209A2AED006C809E /* UICollectionView.swift */; };
 		F64F8327209A2BA6006C809E /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8326209A2BA6006C809E /* TitleCollectionViewCell.swift */; };
+		F6709773209B628700B98FFF /* ReusableTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6709772209B628700B98FFF /* ReusableTableViewDataSource.swift */; };
+		F6F848E5209A822100B89ECF /* ViewModelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F848E4209A822100B89ECF /* ViewModelPresenter.swift */; };
+		F6F848E7209A915000B89ECF /* PresentableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F848E6209A915000B89ECF /* PresentableViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		F64F8321209A2905006C809E /* ReusableCellSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCellSource.swift; sourceTree = "<group>"; };
 		F64F8323209A2AED006C809E /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		F64F8326209A2BA6006C809E /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		F6709772209B628700B98FFF /* ReusableTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTableViewDataSource.swift; sourceTree = "<group>"; };
+		F6F848E4209A822100B89ECF /* ViewModelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPresenter.swift; sourceTree = "<group>"; };
+		F6F848E6209A915000B89ECF /* PresentableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,12 +94,12 @@
 		F64F82CF2099D5E6006C809E /* SwiftGenericCells */ = {
 			isa = PBXGroup;
 			children = (
-				F64F8325209A2B89006C809E /* SimpleCollectionViewCells */,
-				F64F82EF2099FC33006C809E /* SimpleTableViewCells */,
+				F6709771209B624B00B98FFF /* GenericDataSource */,
+				F6709770209B623200B98FFF /* Presentable */,
+				F670976F209B622700B98FFF /* Cells */,
 				F64F82EC2099E237006C809E /* UIKitExtensions */,
 				F64F82D02099D5E6006C809E /* SwiftGenericCells.h */,
 				F64F82D12099D5E6006C809E /* Info.plist */,
-				F64F8321209A2905006C809E /* ReusableCellSource.swift */,
 			);
 			path = SwiftGenericCells;
 			sourceTree = "<group>";
@@ -119,6 +125,7 @@
 		F64F82EC2099E237006C809E /* UIKitExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				F64F8321209A2905006C809E /* ReusableCellSource.swift */,
 				F64F82ED2099E25C006C809E /* UITableView.swift */,
 				F64F8323209A2AED006C809E /* UICollectionView.swift */,
 			);
@@ -147,6 +154,32 @@
 				F64F8326209A2BA6006C809E /* TitleCollectionViewCell.swift */,
 			);
 			path = SimpleCollectionViewCells;
+			sourceTree = "<group>";
+		};
+		F670976F209B622700B98FFF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F64F8325209A2B89006C809E /* SimpleCollectionViewCells */,
+				F64F82EF2099FC33006C809E /* SimpleTableViewCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F6709770209B623200B98FFF /* Presentable */ = {
+			isa = PBXGroup;
+			children = (
+				F6F848E4209A822100B89ECF /* ViewModelPresenter.swift */,
+				F6F848E6209A915000B89ECF /* PresentableViewModel.swift */,
+			);
+			path = Presentable;
+			sourceTree = "<group>";
+		};
+		F6709771209B624B00B98FFF /* GenericDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				F6709772209B628700B98FFF /* ReusableTableViewDataSource.swift */,
+			);
+			path = GenericDataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,7 +347,10 @@
 				F64F82F12099FC54006C809E /* TitleTableViewCell.swift in Sources */,
 				F64F8327209A2BA6006C809E /* TitleCollectionViewCell.swift in Sources */,
 				F64F8324209A2AED006C809E /* UICollectionView.swift in Sources */,
+				F6F848E7209A915000B89ECF /* PresentableViewModel.swift in Sources */,
 				F64F82EE2099E25C006C809E /* UITableView.swift in Sources */,
+				F6F848E5209A822100B89ECF /* ViewModelPresenter.swift in Sources */,
+				F6709773209B628700B98FFF /* ReusableTableViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

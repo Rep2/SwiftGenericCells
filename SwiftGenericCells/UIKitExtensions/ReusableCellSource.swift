@@ -1,5 +1,6 @@
 /// Reusable cell source
-public enum ReusableCellSource {
+public enum ViewSource {
     case nib
     case `class`
+    case storyboard
 }

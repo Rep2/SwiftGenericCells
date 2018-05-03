@@ -6,11 +6,11 @@ extension UITableView {
 
      - Important: Call before `dequeueReusableCell(for:)` to avoid `NSInternalInconsistencyException`.
      */
-    public func register<T: UITableViewCell>(cell: T.Type, reusableCellSource: ReusableCellSource) {
+    public func register<T: UITableViewCell>(cell: T.Type, reusableCellSource: ViewSource) {
         switch reusableCellSource {
         case .nib:
             register(UINib(nibName: String(describing: cell), bundle: nil), forCellReuseIdentifier: String(describing: cell))
-        case .class:
+        case .class, .storyboard:
             register(T.self, forCellReuseIdentifier: String(describing: cell.self))
         }
     }
@@ -18,7 +18,7 @@ extension UITableView {
     /**
      Returns a "cell" of a given type using `CustomStringConvertible` as the reuese identifier.
 
-     - Important: Force unwraps the "cell". Causes the app to crashes with `NSInternalInconsistencyException` if the cell type isn't registered.
+     - Important: Force unwraps the "cell". Causes the app to crashes with `NSInternalInconsistencyException` if the cell type isn't previously registered.
      */
     public func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T {
         return dequeueReusableCell(for: indexPath)!
@@ -27,9 +27,24 @@ extension UITableView {
     /**
      Returns an optional "cell" of a given type using `CustomStringConvertible` as the reuese identifier.
 
-     - Important: Causes the app to crashes with `NSInternalInconsistencyException` if the cell type isn't registered.
+     - Important: Causes the app to crashes with `NSInternalInconsistencyException` if the cell type isn't previously registered.
      */
     public func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T? {
         return dequeueReusableCell(withIdentifier: String(describing: T.self), for: indexPath) as? T
+    }
+}
+
+extension UITableView {
+    /**
+     Returns a "cell" of type `PresentingCell` on which `presentableViewModel` was presented.
+
+     - Important: Causes the app to crashes with `NSInternalInconsistencyException` if the `PresentingCell` type isn't previously registered.
+     */
+    func dequeueAndPresent<Cell: ViewModelPresenter>(presentableViewModel: PresentableViewModel<Cell>, for indexPath: IndexPath) -> Cell where Cell: UITableViewCell {
+        let cell = dequeueReusableCell(for: indexPath) as Cell
+
+        cell.present(viewModel: presentableViewModel.viewModel)
+
+        return cell
     }
 }
