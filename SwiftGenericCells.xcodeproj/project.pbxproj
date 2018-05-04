@@ -18,6 +18,14 @@
 		F64F8324209A2AED006C809E /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8323209A2AED006C809E /* UICollectionView.swift */; };
 		F64F8327209A2BA6006C809E /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8326209A2BA6006C809E /* TitleCollectionViewCell.swift */; };
 		F6709773209B628700B98FFF /* ReusableTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6709772209B628700B98FFF /* ReusableTableViewDataSource.swift */; };
+		F68F1137209C6F7800BADC8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1136209C6F7800BADC8D /* AppDelegate.swift */; };
+		F68F1139209C6F7800BADC8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1138209C6F7800BADC8D /* ViewController.swift */; };
+		F68F113E209C6F7900BADC8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F68F113D209C6F7900BADC8D /* Assets.xcassets */; };
+		F68F1141209C6F7900BADC8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68F113F209C6F7900BADC8D /* LaunchScreen.storyboard */; };
+		F68F1157209C71B800BADC8D /* SwiftGenericCells.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64F82CD2099D5E6006C809E /* SwiftGenericCells.framework */; };
+		F68F1158209C71B800BADC8D /* SwiftGenericCells.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F64F82CD2099D5E6006C809E /* SwiftGenericCells.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F68F115D209C71C900BADC8D /* SwiftViewModels.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1155209C711900BADC8D /* SwiftViewModels.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F68F115E209C71DE00BADC8D /* SwiftViewModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1155209C711900BADC8D /* SwiftViewModels.framework */; };
 		F6F848E5209A822100B89ECF /* ViewModelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F848E4209A822100B89ECF /* ViewModelPresenter.swift */; };
 		F6F848E7209A915000B89ECF /* PresentableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F848E6209A915000B89ECF /* PresentableViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -30,7 +38,36 @@
 			remoteGlobalIDString = F64F82CC2099D5E6006C809E;
 			remoteInfo = SwiftGenericCells;
 		};
+		F68F1148209C6F7900BADC8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F64F82C42099D5E6006C809E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F68F1133209C6F7800BADC8D;
+			remoteInfo = SwiftGenericCellsDemo;
+		};
+		F68F1159209C71B800BADC8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F64F82C42099D5E6006C809E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F64F82CC2099D5E6006C809E;
+			remoteInfo = SwiftGenericCells;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F68F115B209C71B800BADC8D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F68F1158209C71B800BADC8D /* SwiftGenericCells.framework in Embed Frameworks */,
+				F68F115D209C71C900BADC8D /* SwiftViewModels.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F64F82CD2099D5E6006C809E /* SwiftGenericCells.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGenericCells.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +84,15 @@
 		F64F8323209A2AED006C809E /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		F64F8326209A2BA6006C809E /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6709772209B628700B98FFF /* ReusableTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTableViewDataSource.swift; sourceTree = "<group>"; };
+		F68F1134209C6F7800BADC8D /* SwiftGenericCellsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGenericCellsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68F1136209C6F7800BADC8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F68F1138209C6F7800BADC8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F68F113D209C6F7900BADC8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F68F1140209C6F7900BADC8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F68F1142209C6F7900BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F68F1147209C6F7900BADC8D /* SwiftGenericCellsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGenericCellsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68F114D209C6F7900BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F68F1155209C711900BADC8D /* SwiftViewModels.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftViewModels.framework; path = Carthage/Build/iOS/SwiftViewModels.framework; sourceTree = "<group>"; };
 		F6F848E4209A822100B89ECF /* ViewModelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPresenter.swift; sourceTree = "<group>"; };
 		F6F848E6209A915000B89ECF /* PresentableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +115,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F68F1131209C6F7800BADC8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F68F1157209C71B800BADC8D /* SwiftGenericCells.framework in Frameworks */,
+				F68F115E209C71DE00BADC8D /* SwiftViewModels.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F68F1144209C6F7900BADC8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +139,8 @@
 			children = (
 				F64F82CF2099D5E6006C809E /* SwiftGenericCells */,
 				F64F82DA2099D5E6006C809E /* SwiftGenericCellsTests */,
+				F68F1135209C6F7800BADC8D /* SwiftGenericCellsDemo */,
+				F68F114A209C6F7900BADC8D /* SwiftGenericCellsDemoTests */,
 				F64F82CE2099D5E6006C809E /* Products */,
 				F64F82E82099DE86006C809E /* Frameworks */,
 			);
@@ -87,6 +151,8 @@
 			children = (
 				F64F82CD2099D5E6006C809E /* SwiftGenericCells.framework */,
 				F64F82D62099D5E6006C809E /* SwiftGenericCellsTests.xctest */,
+				F68F1134209C6F7800BADC8D /* SwiftGenericCellsDemo.app */,
+				F68F1147209C6F7900BADC8D /* SwiftGenericCellsDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +182,7 @@
 		F64F82E82099DE86006C809E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F68F1155209C711900BADC8D /* SwiftViewModels.framework */,
 				F64F831F209A062E006C809E /* SwiftTryCatch.framework */,
 				F64F82E92099DE86006C809E /* SnapKit.framework */,
 			);
@@ -182,6 +249,26 @@
 			path = GenericDataSource;
 			sourceTree = "<group>";
 		};
+		F68F1135209C6F7800BADC8D /* SwiftGenericCellsDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F68F1136209C6F7800BADC8D /* AppDelegate.swift */,
+				F68F1138209C6F7800BADC8D /* ViewController.swift */,
+				F68F113D209C6F7900BADC8D /* Assets.xcassets */,
+				F68F113F209C6F7900BADC8D /* LaunchScreen.storyboard */,
+				F68F1142209C6F7900BADC8D /* Info.plist */,
+			);
+			path = SwiftGenericCellsDemo;
+			sourceTree = "<group>";
+		};
+		F68F114A209C6F7900BADC8D /* SwiftGenericCellsDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				F68F114D209C6F7900BADC8D /* Info.plist */,
+			);
+			path = SwiftGenericCellsDemoTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -235,6 +322,44 @@
 			productReference = F64F82D62099D5E6006C809E /* SwiftGenericCellsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F68F1133209C6F7800BADC8D /* SwiftGenericCellsDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F68F1152209C6F7900BADC8D /* Build configuration list for PBXNativeTarget "SwiftGenericCellsDemo" */;
+			buildPhases = (
+				F68F1130209C6F7800BADC8D /* Sources */,
+				F68F1131209C6F7800BADC8D /* Frameworks */,
+				F68F1154209C70F700BADC8D /* Carthage */,
+				F68F1132209C6F7800BADC8D /* Resources */,
+				F68F115B209C71B800BADC8D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F68F115A209C71B800BADC8D /* PBXTargetDependency */,
+			);
+			name = SwiftGenericCellsDemo;
+			productName = SwiftGenericCellsDemo;
+			productReference = F68F1134209C6F7800BADC8D /* SwiftGenericCellsDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F68F1146209C6F7900BADC8D /* SwiftGenericCellsDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F68F1153209C6F7900BADC8D /* Build configuration list for PBXNativeTarget "SwiftGenericCellsDemoTests" */;
+			buildPhases = (
+				F68F1143209C6F7900BADC8D /* Sources */,
+				F68F1144209C6F7900BADC8D /* Frameworks */,
+				F68F1145209C6F7900BADC8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F68F1149209C6F7900BADC8D /* PBXTargetDependency */,
+			);
+			name = SwiftGenericCellsDemoTests;
+			productName = SwiftGenericCellsDemoTests;
+			productReference = F68F1147209C6F7900BADC8D /* SwiftGenericCellsDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -253,6 +378,13 @@
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
 					};
+					F68F1133209C6F7800BADC8D = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					F68F1146209C6F7900BADC8D = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = F68F1133209C6F7800BADC8D;
+					};
 				};
 			};
 			buildConfigurationList = F64F82C72099D5E6006C809E /* Build configuration list for PBXProject "SwiftGenericCells" */;
@@ -261,6 +393,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = F64F82C32099D5E6006C809E;
 			productRefGroup = F64F82CE2099D5E6006C809E /* Products */;
@@ -269,6 +402,8 @@
 			targets = (
 				F64F82CC2099D5E6006C809E /* SwiftGenericCells */,
 				F64F82D52099D5E6006C809E /* SwiftGenericCellsTests */,
+				F68F1133209C6F7800BADC8D /* SwiftGenericCellsDemo */,
+				F68F1146209C6F7900BADC8D /* SwiftGenericCellsDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,6 +417,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F64F82D42099D5E6006C809E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F68F1132209C6F7800BADC8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F68F1141209C6F7900BADC8D /* LaunchScreen.storyboard in Resources */,
+				F68F113E209C6F7900BADC8D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F68F1145209C6F7900BADC8D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -336,6 +487,21 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
+		F68F1154209C70F700BADC8D /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -362,6 +528,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F68F1130209C6F7800BADC8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F68F1139209C6F7800BADC8D /* ViewController.swift in Sources */,
+				F68F1137209C6F7800BADC8D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F68F1143209C6F7900BADC8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -370,7 +552,28 @@
 			target = F64F82CC2099D5E6006C809E /* SwiftGenericCells */;
 			targetProxy = F64F82D82099D5E6006C809E /* PBXContainerItemProxy */;
 		};
+		F68F1149209C6F7900BADC8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F68F1133209C6F7800BADC8D /* SwiftGenericCellsDemo */;
+			targetProxy = F68F1148209C6F7900BADC8D /* PBXContainerItemProxy */;
+		};
+		F68F115A209C71B800BADC8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F64F82CC2099D5E6006C809E /* SwiftGenericCells */;
+			targetProxy = F68F1159209C71B800BADC8D /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F68F113F209C6F7900BADC8D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F68F1140209C6F7900BADC8D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F64F82DF2099D5E6006C809E /* Debug */ = {
@@ -605,6 +808,94 @@
 			};
 			name = Release;
 		};
+		F68F114E209C6F7900BADC8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MDX989Y6D8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SwiftGenericCellsDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SwiftGenericCellsDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F68F114F209C6F7900BADC8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MDX989Y6D8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = SwiftGenericCellsDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SwiftGenericCellsDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F68F1150209C6F7900BADC8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MDX989Y6D8;
+				INFOPLIST_FILE = SwiftGenericCellsDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SwiftGenericCellsDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftGenericCellsDemo.app/SwiftGenericCellsDemo";
+			};
+			name = Debug;
+		};
+		F68F1151209C6F7900BADC8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MDX989Y6D8;
+				INFOPLIST_FILE = SwiftGenericCellsDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SwiftGenericCellsDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftGenericCellsDemo.app/SwiftGenericCellsDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -631,6 +922,24 @@
 			buildConfigurations = (
 				F64F82E52099D5E6006C809E /* Debug */,
 				F64F82E62099D5E6006C809E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F68F1152209C6F7900BADC8D /* Build configuration list for PBXNativeTarget "SwiftGenericCellsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F68F114E209C6F7900BADC8D /* Debug */,
+				F68F114F209C6F7900BADC8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F68F1153209C6F7900BADC8D /* Build configuration list for PBXNativeTarget "SwiftGenericCellsDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F68F1150209C6F7900BADC8D /* Debug */,
+				F68F1151209C6F7900BADC8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

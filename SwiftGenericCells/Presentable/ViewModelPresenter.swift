@@ -1,7 +1,13 @@
-protocol ViewModelPresenter {
+public protocol ViewModelPresenter {
     associatedtype ViewModel
 
-    var source: ViewSource { get }
+    static var source: ViewSource { get }
 
     func present(viewModel: ViewModel)
+}
+
+extension ViewModelPresenter {
+    public static var source: ViewSource {
+        return .class
+    }
 }

@@ -40,8 +40,8 @@ extension UICollectionView {
 
      - Important: Causes the app to crashes with `NSInternalInconsistencyException` if the `PresentingCell` type isn't previously registered.
      */
-    func dequeueAndPresent<Cell: ViewModelPresenter>(presentableViewModel: PresentableViewModel<Cell>, for indexPath: IndexPath) -> Cell where Cell: UICollectionViewCell {
-        let cell = dequeueReusableCell(for: indexPath) as Cell
+    func dequeueAndPresent<Presenter: ViewModelPresenter>(presentableViewModel: PresentableViewModel<Presenter>, for indexPath: IndexPath) -> Presenter where Presenter: UICollectionViewCell {
+        let cell = dequeueReusableCell(for: indexPath) as Presenter
 
         cell.present(viewModel: presentableViewModel.viewModel)
 

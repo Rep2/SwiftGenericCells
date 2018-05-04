@@ -2,7 +2,7 @@ import SwiftViewModels
 import SnapKit
 import UIKit
 
-public struct TitleTableViewCellViewModel {
+public class TitleTableViewCellViewModel {
     public let titleViewModel: TextViewModel
 
     public init(titleViewModel: TextViewModel) {
@@ -11,10 +11,6 @@ public struct TitleTableViewCellViewModel {
 }
 
 public class TitleTableViewCell: UITableViewCell, ViewModelPresenter {
-    typealias ViewModel = TitleTableViewCellViewModel
-
-    let source = ViewSource.class
-
     lazy var titleLabel: UILabel = {
         return UILabel()
     }()
@@ -32,5 +28,10 @@ public class TitleTableViewCell: UITableViewCell, ViewModelPresenter {
 
     public func present(viewModel: TitleTableViewCellViewModel) {
         viewModel.titleViewModel.apply(toLabel: titleLabel)
+    }
+}
+
+public class TitleTableViewCellViewModel2 {
+    public init() {
     }
 }
