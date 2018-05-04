@@ -12,7 +12,11 @@ public class TitleTableViewCellViewModel {
 
 public class TitleTableViewCell: UITableViewCell, ViewModelPresenter {
     lazy var titleLabel: UILabel = {
-        return UILabel()
+        let label = UILabel()
+
+        label.font = .systemFont(ofSize: 15)
+
+        return label
     }()
 
     public override func layoutSubviews() {
@@ -28,10 +32,5 @@ public class TitleTableViewCell: UITableViewCell, ViewModelPresenter {
 
     public func present(viewModel: TitleTableViewCellViewModel) {
         viewModel.titleViewModel.apply(toLabel: titleLabel)
-    }
-}
-
-public class TitleTableViewCellViewModel2 {
-    public init() {
     }
 }

@@ -9,7 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        window?.rootViewController = ViewController(nibName: nil, bundle: nil)
+        window?.rootViewController = ViewController(style: .grouped)
         window?.makeKeyAndVisible()
 
         return true

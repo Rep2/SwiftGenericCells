@@ -26,6 +26,9 @@
 		F68F1158209C71B800BADC8D /* SwiftGenericCells.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F64F82CD2099D5E6006C809E /* SwiftGenericCells.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F68F115D209C71C900BADC8D /* SwiftViewModels.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1155209C711900BADC8D /* SwiftViewModels.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F68F115E209C71DE00BADC8D /* SwiftViewModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1155209C711900BADC8D /* SwiftViewModels.framework */; };
+		F68F1160209CACD700BADC8D /* ImageTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F115F209CACD700BADC8D /* ImageTitleTableViewCell.swift */; };
+		F68F1162209CB0F700BADC8D /* AnyTableViewPresentableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1161209CB0F700BADC8D /* AnyTableViewPresentableViewModel.swift */; };
+		F68F1166209CB12300BADC8D /* AnyCollectionViewPresentableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1165209CB12300BADC8D /* AnyCollectionViewPresentableViewModel.swift */; };
 		F6F848E5209A822100B89ECF /* ViewModelPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F848E4209A822100B89ECF /* ViewModelPresenter.swift */; };
 		F6F848E7209A915000B89ECF /* PresentableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F848E6209A915000B89ECF /* PresentableViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -93,6 +96,9 @@
 		F68F1147209C6F7900BADC8D /* SwiftGenericCellsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGenericCellsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F114D209C6F7900BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68F1155209C711900BADC8D /* SwiftViewModels.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftViewModels.framework; path = Carthage/Build/iOS/SwiftViewModels.framework; sourceTree = "<group>"; };
+		F68F115F209CACD700BADC8D /* ImageTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleTableViewCell.swift; sourceTree = "<group>"; };
+		F68F1161209CB0F700BADC8D /* AnyTableViewPresentableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTableViewPresentableViewModel.swift; sourceTree = "<group>"; };
+		F68F1165209CB12300BADC8D /* AnyCollectionViewPresentableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCollectionViewPresentableViewModel.swift; sourceTree = "<group>"; };
 		F6F848E4209A822100B89ECF /* ViewModelPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPresenter.swift; sourceTree = "<group>"; };
 		F6F848E6209A915000B89ECF /* PresentableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				F64F82F02099FC54006C809E /* TitleTableViewCell.swift */,
+				F68F115F209CACD700BADC8D /* ImageTitleTableViewCell.swift */,
 			);
 			path = SimpleTableViewCells;
 			sourceTree = "<group>";
@@ -244,7 +251,8 @@
 		F6709771209B624B00B98FFF /* GenericDataSource */ = {
 			isa = PBXGroup;
 			children = (
-				F6709772209B628700B98FFF /* ReusableTableViewDataSource.swift */,
+				F68F1164209CB11100BADC8D /* CollectionView */,
+				F68F1163209CB10800BADC8D /* TableView */,
 			);
 			path = GenericDataSource;
 			sourceTree = "<group>";
@@ -267,6 +275,23 @@
 				F68F114D209C6F7900BADC8D /* Info.plist */,
 			);
 			path = SwiftGenericCellsDemoTests;
+			sourceTree = "<group>";
+		};
+		F68F1163209CB10800BADC8D /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F6709772209B628700B98FFF /* ReusableTableViewDataSource.swift */,
+				F68F1161209CB0F700BADC8D /* AnyTableViewPresentableViewModel.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		F68F1164209CB11100BADC8D /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				F68F1165209CB12300BADC8D /* AnyCollectionViewPresentableViewModel.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,6 +534,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F68F1166209CB12300BADC8D /* AnyCollectionViewPresentableViewModel.swift in Sources */,
 				F64F8322209A2905006C809E /* ReusableCellSource.swift in Sources */,
 				F64F82F12099FC54006C809E /* TitleTableViewCell.swift in Sources */,
 				F64F8327209A2BA6006C809E /* TitleCollectionViewCell.swift in Sources */,
@@ -516,6 +542,8 @@
 				F6F848E7209A915000B89ECF /* PresentableViewModel.swift in Sources */,
 				F64F82EE2099E25C006C809E /* UITableView.swift in Sources */,
 				F6F848E5209A822100B89ECF /* ViewModelPresenter.swift in Sources */,
+				F68F1162209CB0F700BADC8D /* AnyTableViewPresentableViewModel.swift in Sources */,
+				F68F1160209CACD700BADC8D /* ImageTitleTableViewCell.swift in Sources */,
 				F6709773209B628700B98FFF /* ReusableTableViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

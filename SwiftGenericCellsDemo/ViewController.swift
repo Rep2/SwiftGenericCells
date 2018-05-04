@@ -8,10 +8,16 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let anyPresentableViewModel = AnyTableViewPresentableViewModel(base: PresentableViewModel<TitleTableViewCell>(viewModel: TitleTableViewCellViewModel(titleViewModel: TextViewModel(text: "asdas"))))
-        let anyPresentableViewModel2 = AnyTableViewPresentableViewModel(base: PresentableViewModel<TitleTableViewCell>(viewModel: TitleTableViewCellViewModel(titleViewModel: TextViewModel(text: "asdasdasdasdasd"))))
-
-        let array = [anyPresentableViewModel, anyPresentableViewModel2]
+        let array = [
+            PresentableViewModel<TitleTableViewCell>(viewModel: TitleTableViewCellViewModel(titleViewModel: TextViewModel(text: "asdas"))).any,
+            PresentableViewModel<TitleTableViewCell>(viewModel: TitleTableViewCellViewModel(titleViewModel: TextViewModel(text: "asdasdasdasdasd"))).any,
+            PresentableViewModel<ImageTitleTableViewCell>(
+                viewModel: ImageTitleTableViewCellViewModel(
+                    titleViewModel: TextViewModel(text: "sadas"),
+                    imageViewModel: ImageViewModel(image: #imageLiteral(resourceName: "filter"), viewViewModel: ViewViewModel())
+                )
+            ).any
+        ]
 
         tableView.dataSource = dataSource
 
