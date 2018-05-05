@@ -10,3 +10,6 @@
 [submodule "Carthage/Checkouts/SwiftTryCatch"]
 	path = Carthage/Checkouts/SwiftTryCatch
 	url = file:///Users/ivanrep/Projects/Public/SwiftTryCatch
+[submodule "Carthage/Checkouts/ReusableDataSource"]
+	path = Carthage/Checkouts/ReusableDataSource
+	url = https://github.com/Rep2/ReusableDataSource.git

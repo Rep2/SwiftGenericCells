@@ -1,3 +1,4 @@
+import ReusableDataSource
 import SwiftViewModels
 import SnapKit
 import UIKit
@@ -12,7 +13,7 @@ public class ImageTitleTableViewCellViewModel {
     }
 }
 
-public class ImageTitleTableViewCell: UITableViewCell, ViewModelPresenter {
+public class ImageTitleTableViewCell: UITableViewCell, ReusablePresenter {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
 

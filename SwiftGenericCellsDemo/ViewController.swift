@@ -1,3 +1,4 @@
+import ReusableDataSource
 import SwiftViewModels
 import SwiftGenericCells
 import UIKit
@@ -9,18 +10,18 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
 
         let array = [
-            PresentableViewModel<TitleTableViewCell>(viewModel: TitleTableViewCellViewModel(titleViewModel: TextViewModel(text: "asdas"))).any,
-            PresentableViewModel<TitleTableViewCell>(viewModel: TitleTableViewCellViewModel(titleViewModel: TextViewModel(text: "asdasdasdasdasd"))).any,
-            PresentableViewModel<ImageTitleTableViewCell>(
+            ReusableViewModel<TitleTableViewCell>(viewModel: TitleTableViewCellViewModel(titleViewModel: TextViewModel(text: "asdas"))).anyPresentable,
+            ReusableViewModel<TitleTableViewCell>(viewModel: TitleTableViewCellViewModel(titleViewModel: TextViewModel(text: "asdasdasdasdasd"))).anyPresentable,
+            ReusableViewModel<ImageTitleTableViewCell>(
                 viewModel: ImageTitleTableViewCellViewModel(
                     titleViewModel: TextViewModel(text: "sadas"),
                     imageViewModel: ImageViewModel(image: #imageLiteral(resourceName: "filter"), viewViewModel: ViewViewModel())
                 )
-            ).any
+            ).anyPresentable
         ]
 
         tableView.dataSource = dataSource
 
-        dataSource.present(presentableViewModels: [array], on: tableView)
+        dataSource.present(presentableViewModels: array, on: tableView)
     }
 }
