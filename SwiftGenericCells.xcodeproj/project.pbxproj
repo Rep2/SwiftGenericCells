@@ -258,7 +258,6 @@
 				F64F82C92099D5E6006C809E /* Frameworks */,
 				F64F82CA2099D5E6006C809E /* Headers */,
 				F64F82CB2099D5E6006C809E /* Resources */,
-				F64F82E72099D685006C809E /* Carthage */,
 				F64F82EB2099DEE3006C809E /* Swiftlint */,
 			);
 			buildRules = (
@@ -409,26 +408,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		F64F82E72099D685006C809E /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftViewModels.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReusableDataSource.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftViewModels.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReusableDataSource.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 		F64F82EB2099DEE3006C809E /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
