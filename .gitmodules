@@ -13,3 +13,6 @@
 [submodule "Carthage/Checkouts/ReusableDataSource"]
 	path = Carthage/Checkouts/ReusableDataSource
 	url = https://github.com/Rep2/ReusableDataSource.git
+[submodule "Carthage/Checkouts/ViewModels"]
+	path = Carthage/Checkouts/ViewModels
+	url = file:///Users/ivanrep/Projects/ViewModels

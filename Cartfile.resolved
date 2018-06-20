@@ -1,4 +1,4 @@
-github "Quick/Nimble" "v7.1.1"
+git "file:///Users/ivanrep/Projects/ViewModels" "df077967a7f307491a064fdfa1b89b4953c2ae0e"
+github "Quick/Nimble" "v7.1.2"
 github "Rep2/ReusableDataSource" "0.1"
-github "Rep2/SwiftViewModels" "v0.1.3"
 github "SnapKit/SnapKit" "4.0.0"
