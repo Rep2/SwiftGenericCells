@@ -25,6 +25,8 @@
 		F68F1160209CACD700BADC8D /* ImageTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F115F209CACD700BADC8D /* ImageTitleTableViewCell.swift */; };
 		F68F11D3209DB2BC00BADC8D /* SwiftViewModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1155209C711900BADC8D /* SwiftViewModels.framework */; };
 		F68F11D5209DB2E900BADC8D /* ReusableDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F11D4209DB2E900BADC8D /* ReusableDataSource.framework */; };
+		F6D1B54620DD4FDB006B0B59 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D1B54520DD4FDB006B0B59 /* TableViewCellViewModel.swift */; };
+		F6D1B54820DD52D0006B0B59 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D1B54720DD52D0006B0B59 /* SwitchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		F68F1155209C711900BADC8D /* SwiftViewModels.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftViewModels.framework; path = Carthage/Build/iOS/SwiftViewModels.framework; sourceTree = "<group>"; };
 		F68F115F209CACD700BADC8D /* ImageTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleTableViewCell.swift; sourceTree = "<group>"; };
 		F68F11D4209DB2E900BADC8D /* ReusableDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReusableDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6D1B54520DD4FDB006B0B59 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
+		F6D1B54720DD52D0006B0B59 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,7 @@
 		F64F82CF2099D5E6006C809E /* SwiftGenericCells */ = {
 			isa = PBXGroup;
 			children = (
+				F6D1B54320DD4FC1006B0B59 /* ViewModels */,
 				F670976F209B622700B98FFF /* Cells */,
 				F64F82D02099D5E6006C809E /* SwiftGenericCells.h */,
 				F64F82D12099D5E6006C809E /* Info.plist */,
@@ -187,6 +192,7 @@
 			children = (
 				F64F82F02099FC54006C809E /* TitleTableViewCell.swift */,
 				F68F115F209CACD700BADC8D /* ImageTitleTableViewCell.swift */,
+				F6D1B54720DD52D0006B0B59 /* SwitchTableViewCell.swift */,
 			);
 			path = SimpleTableViewCells;
 			sourceTree = "<group>";
@@ -234,6 +240,22 @@
 				F68F114D209C6F7900BADC8D /* Info.plist */,
 			);
 			path = SwiftGenericCellsDemoTests;
+			sourceTree = "<group>";
+		};
+		F6D1B54320DD4FC1006B0B59 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F6D1B54420DD4FC9006B0B59 /* TableViewViewModels */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F6D1B54420DD4FC9006B0B59 /* TableViewViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F6D1B54520DD4FDB006B0B59 /* TableViewCellViewModel.swift */,
+			);
+			path = TableViewViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,6 +486,8 @@
 			files = (
 				F64F82F12099FC54006C809E /* TitleTableViewCell.swift in Sources */,
 				F64F8327209A2BA6006C809E /* TitleCollectionViewCell.swift in Sources */,
+				F6D1B54820DD52D0006B0B59 /* SwitchTableViewCell.swift in Sources */,
+				F6D1B54620DD4FDB006B0B59 /* TableViewCellViewModel.swift in Sources */,
 				F68F1160209CACD700BADC8D /* ImageTitleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

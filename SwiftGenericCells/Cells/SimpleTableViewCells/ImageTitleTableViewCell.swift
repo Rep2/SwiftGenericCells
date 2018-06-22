@@ -30,14 +30,24 @@ public class ImageTitleTableViewCell: UITableViewCell, ReusablePresenter {
         return imageView
     }()
 
-    public override func layoutSubviews() {
-        super.layoutSubviews()
+    public func present(viewModel: ImageTitleTableViewCellViewModel) {
+        viewModel.titleViewModel.apply(toLabel: titleLabel)
+        viewModel.imageViewModel.apply(toImageView: customImageView)
+    }
 
-        contentView.addSubview(customImageView)
-        contentView.addSubview(titleLabel)
+    public func setupCell() {
+        addSubviews()
+        setupConstraints()
+    }
 
+    public func addSubviews() {
+        addSubview(customImageView)
+        addSubview(titleLabel)
+    }
+
+    public func setupConstraints() {
         customImageView.snp.makeConstraints { make in
-            make.left.equalTo(contentView).inset(UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
+            make.left.top.bottom.equalToSuperview().inset(UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16))
             make.centerY.equalTo(contentView)
             make.height.width.equalTo(24)
         }
@@ -47,10 +57,5 @@ public class ImageTitleTableViewCell: UITableViewCell, ReusablePresenter {
             make.left.equalTo(customImageView.snp.right).offset(16)
             make.centerY.equalTo(contentView)
         }
-    }
-
-    public func present(viewModel: ImageTitleTableViewCellViewModel) {
-        viewModel.titleViewModel.apply(toLabel: titleLabel)
-        viewModel.imageViewModel.apply(toImageView: customImageView)
     }
 }

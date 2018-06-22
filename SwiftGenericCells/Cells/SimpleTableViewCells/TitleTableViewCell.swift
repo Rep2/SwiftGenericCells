@@ -5,9 +5,11 @@ import UIKit
 
 public class TitleTableViewCellViewModel {
     public let titleViewModel: TextViewModel
+    public let cellViewModel: TableViewCellViewModel?
 
-    public init(titleViewModel: TextViewModel) {
+    public init(titleViewModel: TextViewModel, cellViewModel: TableViewCellViewModel? = nil) {
         self.titleViewModel = titleViewModel
+        self.cellViewModel = cellViewModel
     }
 }
 
@@ -20,18 +22,28 @@ public class TitleTableViewCell: UITableViewCell, ReusablePresenter {
         return label
     }()
 
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-
-        contentView.addSubview(titleLabel)
-
-        titleLabel.snp.makeConstraints { make in
-            make.left.right.equalTo(contentView).inset(UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
-            make.centerY.equalTo(contentView)
+    public func present(viewModel: TitleTableViewCellViewModel) {
+        if titleLabel.superview == nil {
+            setupCell()
         }
+
+        viewModel.titleViewModel.apply(toLabel: titleLabel)
+
+        accessoryType = viewModel.cellViewModel?.accessoryType ?? .none
     }
 
-    public func present(viewModel: TitleTableViewCellViewModel) {
-        viewModel.titleViewModel.apply(toLabel: titleLabel)
+    public func setupCell() {
+        addSubviews()
+        setupConstraints()
+    }
+
+    public func addSubviews() {
+        addSubview(titleLabel)
+    }
+
+    public func setupConstraints() {
+        titleLabel.snp.makeConstraints { make in
+            make.left.right.top.bottom.equalToSuperview().inset(UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16))
+        }
     }
 }
