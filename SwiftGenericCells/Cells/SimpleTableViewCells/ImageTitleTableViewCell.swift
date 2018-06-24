@@ -7,9 +7,12 @@ public class ImageTitleTableViewCellViewModel {
     public let titleViewModel: TextViewModel
     public let imageViewModel: ImageViewModel
 
-    public init(titleViewModel: TextViewModel, imageViewModel: ImageViewModel) {
+    public let cellViewModel: TableViewCellViewModel?
+
+    public init(titleViewModel: TextViewModel, imageViewModel: ImageViewModel, cellViewModel: TableViewCellViewModel?) {
         self.titleViewModel = titleViewModel
         self.imageViewModel = imageViewModel
+        self.cellViewModel = cellViewModel
     }
 }
 
@@ -33,6 +36,8 @@ public class ImageTitleTableViewCell: UITableViewCell, ReusablePresenter {
     public func present(viewModel: ImageTitleTableViewCellViewModel) {
         viewModel.titleViewModel.apply(toLabel: titleLabel)
         viewModel.imageViewModel.apply(toImageView: customImageView)
+
+        accessoryType = viewModel.cellViewModel?.accessoryType ?? .none
     }
 
     public func setupCell() {
