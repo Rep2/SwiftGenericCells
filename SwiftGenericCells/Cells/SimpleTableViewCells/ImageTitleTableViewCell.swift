@@ -34,6 +34,10 @@ public class ImageTitleTableViewCell: UITableViewCell, ReusablePresenter {
     }()
 
     public func present(viewModel: ImageTitleTableViewCellViewModel) {
+        if titleLabel.superview == nil {
+            setupCell()
+        }
+
         viewModel.titleViewModel.apply(toLabel: titleLabel)
         viewModel.imageViewModel.apply(toImageView: customImageView)
 
