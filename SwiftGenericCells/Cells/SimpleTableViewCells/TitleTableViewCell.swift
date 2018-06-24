@@ -43,7 +43,8 @@ public class TitleTableViewCell: UITableViewCell, ReusablePresenter {
 
     public func setupConstraints() {
         titleLabel.snp.makeConstraints { make in
-            make.left.right.top.bottom.equalToSuperview().inset(UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16))
+            make.left.right.equalToSuperview().inset(UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16))
+            make.centerY.equalToSuperview()
         }
     }
 }
