@@ -9,7 +9,7 @@ public class ImageTitleTableViewCellViewModel {
 
     public let cellViewModel: TableViewCellViewModel?
 
-    public init(titleViewModel: TextViewModel, imageViewModel: ImageViewModel, cellViewModel: TableViewCellViewModel?) {
+    public init(titleViewModel: TextViewModel, imageViewModel: ImageViewModel, cellViewModel: TableViewCellViewModel? = nil) {
         self.titleViewModel = titleViewModel
         self.imageViewModel = imageViewModel
         self.cellViewModel = cellViewModel

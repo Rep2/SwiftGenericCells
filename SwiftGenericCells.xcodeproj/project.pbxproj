@@ -25,6 +25,7 @@
 		F68F1160209CACD700BADC8D /* ImageTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F115F209CACD700BADC8D /* ImageTitleTableViewCell.swift */; };
 		F68F11D3209DB2BC00BADC8D /* SwiftViewModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1155209C711900BADC8D /* SwiftViewModels.framework */; };
 		F68F11D5209DB2E900BADC8D /* ReusableDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F11D4209DB2E900BADC8D /* ReusableDataSource.framework */; };
+		F6B7FAE520E116490067CF72 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B7FAE420E116490067CF72 /* ImageCollectionViewCell.swift */; };
 		F6D1B54620DD4FDB006B0B59 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D1B54520DD4FDB006B0B59 /* TableViewCellViewModel.swift */; };
 		F6D1B54820DD52D0006B0B59 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D1B54720DD52D0006B0B59 /* SwitchTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,7 @@
 		F68F1155209C711900BADC8D /* SwiftViewModels.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftViewModels.framework; path = Carthage/Build/iOS/SwiftViewModels.framework; sourceTree = "<group>"; };
 		F68F115F209CACD700BADC8D /* ImageTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleTableViewCell.swift; sourceTree = "<group>"; };
 		F68F11D4209DB2E900BADC8D /* ReusableDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReusableDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6B7FAE420E116490067CF72 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6D1B54520DD4FDB006B0B59 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
 		F6D1B54720DD52D0006B0B59 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				F64F8326209A2BA6006C809E /* TitleCollectionViewCell.swift */,
+				F6B7FAE420E116490067CF72 /* ImageCollectionViewCell.swift */,
 			);
 			path = SimpleCollectionViewCells;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B7FAE520E116490067CF72 /* ImageCollectionViewCell.swift in Sources */,
 				F64F82F12099FC54006C809E /* TitleTableViewCell.swift in Sources */,
 				F64F8327209A2BA6006C809E /* TitleCollectionViewCell.swift in Sources */,
 				F6D1B54820DD52D0006B0B59 /* SwitchTableViewCell.swift in Sources */,
