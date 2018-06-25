@@ -1,3 +1,4 @@
+import ReusableDataSource
 import SwiftViewModels
 import UIKit
 import SnapKit
@@ -10,14 +11,6 @@ open class ImageCollectionViewCell: UICollectionViewCell {
     lazy var imageView: UIImageView = {
         return UIImageView(frame: .zero)
     }()
-
-    public func present(viewModel: ImageCollectionViewCellViewModel) {
-        if imageView.superview == nil {
-            setupCell()
-        }
-
-        viewModel.imageViewModel.apply(toImageView: imageView)
-    }
 
     open func setupCell() {
         addSubviews()
@@ -32,5 +25,15 @@ open class ImageCollectionViewCell: UICollectionViewCell {
         imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+    }
+}
+
+extension ImageCollectionViewCell: ReusablePresenter {
+    public func present(viewModel: ImageCollectionViewCellViewModel) {
+        if imageView.superview == nil {
+            setupCell()
+        }
+
+        viewModel.imageViewModel.apply(toImageView: imageView)
     }
 }
