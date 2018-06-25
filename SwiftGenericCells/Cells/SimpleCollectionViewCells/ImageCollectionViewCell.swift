@@ -6,7 +6,7 @@ public struct ImageCollectionViewCellViewModel {
     let imageViewModel: ImageViewModel
 }
 
-public class ImageCollectionViewCell: UICollectionViewCell {
+open class ImageCollectionViewCell: UICollectionViewCell {
     lazy var imageView: UIImageView = {
         return UIImageView(frame: .zero)
     }()
@@ -19,9 +19,16 @@ public class ImageCollectionViewCell: UICollectionViewCell {
         viewModel.imageViewModel.apply(toImageView: imageView)
     }
 
-    func setupCell() {
-        addSubview(imageView)
+    open func setupCell() {
+        addSubviews()
+        layout()
+    }
 
+    open func addSubviews() {
+        addSubview(imageView)
+    }
+
+    open func layout() {
         imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
