@@ -4,7 +4,11 @@ import UIKit
 import SnapKit
 
 public struct ImageCollectionViewCellViewModel {
-    let imageViewModel: ImageViewModel
+    public let imageViewModel: ImageViewModel
+
+    public init(imageViewModel: ImageViewModel) {
+        self.imageViewModel = imageViewModel
+    }
 }
 
 open class ImageCollectionViewCell: UICollectionViewCell {

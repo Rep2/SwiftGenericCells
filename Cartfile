@@ -1,6 +1,4 @@
 github "Rep2/ReusableDataSource" ~> 0.1
-
-#github "Rep2/SwiftViewModels" ~> 0.1
-git "file:///Users/ivanrep/Projects/ViewModels" "master"
+github "Rep2/SwiftViewModels" ~> 0.2
 
 github "SnapKit/SnapKit" ~> 4.0
