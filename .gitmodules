@@ -1,0 +1,8 @@
+[submodule "Carthage/Checkouts/Nimble"]
+	url = https://github.com/Quick/Nimble.git
+[submodule "Carthage/Checkouts/SwiftViewModels"]
+	url = https://github.com/Rep2/SwiftViewModels.git
+[submodule "Carthage/Checkouts/SnapKit"]
+	url = https://github.com/SnapKit/SnapKit.git
+[submodule "Carthage/Checkouts/ReusableDataSource"]
+	url = https://github.com/Rep2/ReusableDataSource.git
