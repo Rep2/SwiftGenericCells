@@ -1,9 +1,0 @@
-{
-  "commitish" : "4.0.0",
-  "iOS" : [
-    {
-      "name" : "SnapKit",
-      "hash" : "c928609dad8098e3ebc48f02358e7b210146954e1b5889b6271c6ce10d31892b"
-    }
-  ]
-}
