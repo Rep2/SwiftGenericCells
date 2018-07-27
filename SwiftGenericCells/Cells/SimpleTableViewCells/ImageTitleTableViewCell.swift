@@ -57,7 +57,7 @@ public class ImageTitleTableViewCell: UITableViewCell, ReusablePresenter {
     public func setupConstraints() {
         customImageView.snp.makeConstraints { make in
             make.left.top.bottom.equalToSuperview().inset(UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16))
-            make.height.equalTo(customImageView.snp.width)
+            make.width.equalTo(customImageView.snp.height)
         }
 
         titleLabel.snp.makeConstraints { make in
