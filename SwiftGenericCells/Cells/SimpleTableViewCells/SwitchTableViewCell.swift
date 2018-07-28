@@ -28,10 +28,16 @@ public class SwitchTableViewCell: UITableViewCell, ReusablePresenter {
     lazy var switchControl: UISwitch = {
         let switchControl = UISwitch(frame: .zero)
 
+        switchControl.addTarget(self, action: #selector(switchValueUpdated), for: .valueChanged)
+
         return switchControl
     }()
 
+    var viewModel: SwitchTableViewCellViewModel?
+
     public func present(viewModel: SwitchTableViewCellViewModel) {
+        self.viewModel = viewModel
+
         if titleLabel.superview == nil {
             setupCell()
         }
@@ -62,5 +68,10 @@ public class SwitchTableViewCell: UITableViewCell, ReusablePresenter {
             make.right.top.bottom.equalToSuperview().inset(UIEdgeInsets(top: 4, left: 0, bottom: 4, right: 16))
             make.left.equalTo(titleLabel.snp.right).offset(16)
         }
+    }
+
+    @objc
+    func switchValueUpdated() {
+        viewModel?.switchViewModel.isOnValueChangedCallback?(switchControl.isOn)
     }
 }
