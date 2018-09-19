@@ -10,11 +10,11 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
 
         let array = [
-            ReusableViewModel<TitleTableViewCell>(viewModel: TitleTableViewCellViewModel(titleViewModel: TextViewModel(text: "asdas"))).anyPresentable,
-            ReusableViewModel<TitleTableViewCell>(viewModel: TitleTableViewCellViewModel(titleViewModel: TextViewModel(text: "asdasdasdasdasd"))).anyPresentable,
+            ReusableViewModel<TitleTableViewCell>(viewModel: TitleTableViewCellViewModel(titleViewModel: "asdas")).anyPresentable,
+            ReusableViewModel<TitleTableViewCell>(viewModel: TitleTableViewCellViewModel(titleViewModel: "asdasdasdasdasd")).anyPresentable,
             ReusableViewModel<ImageTitleTableViewCell>(
                 viewModel: ImageTitleTableViewCellViewModel(
-                    titleViewModel: TextViewModel(text: "sadas"),
+                    titleViewModel: "sadas",
                     imageViewModel: ImageViewModel(image: #imageLiteral(resourceName: "filter"), viewViewModel: ViewViewModel())
                 )
             ).anyPresentable
