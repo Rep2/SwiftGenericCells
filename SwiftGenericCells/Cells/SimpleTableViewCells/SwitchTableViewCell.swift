@@ -42,7 +42,7 @@ public class SwitchTableViewCell: UITableViewCell, ReusablePresenter {
             setupCell()
         }
 
-        viewModel.titleViewModel.apply(toLabel: titleLabel)
+        viewModel.titleViewModel.apply(to: titleLabel)
         viewModel.switchViewModel.apply(toSwitch: switchControl)
 
         accessoryType = viewModel.cellViewModel?.accessoryType ?? .none

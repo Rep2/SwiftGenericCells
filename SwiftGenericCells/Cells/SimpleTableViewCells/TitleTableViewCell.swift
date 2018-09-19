@@ -27,7 +27,7 @@ public class TitleTableViewCell: UITableViewCell, ReusablePresenter {
             setupCell()
         }
 
-        viewModel.titleViewModel.apply(toLabel: titleLabel)
+        viewModel.titleViewModel.apply(to: titleLabel)
 
         accessoryType = viewModel.cellViewModel?.accessoryType ?? .none
     }
