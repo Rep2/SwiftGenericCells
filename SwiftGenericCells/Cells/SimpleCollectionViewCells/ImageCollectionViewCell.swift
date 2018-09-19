@@ -38,6 +38,6 @@ extension ImageCollectionViewCell: ReusablePresenter {
             setupCell()
         }
 
-        viewModel.imageViewModel.apply(toImageView: imageView)
+        viewModel.imageViewModel.apply(to: imageView)
     }
 }

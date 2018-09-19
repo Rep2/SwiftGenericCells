@@ -15,7 +15,7 @@ class ViewController: UITableViewController {
             ReusableViewModel<ImageTitleTableViewCell>(
                 viewModel: ImageTitleTableViewCellViewModel(
                     titleViewModel: "sadas",
-                    imageViewModel: ImageViewModel(image: #imageLiteral(resourceName: "filter"), viewViewModel: ViewViewModel())
+                    imageViewModel: #imageLiteral(resourceName: "filter")
                 )
             ).anyPresentable
         ]

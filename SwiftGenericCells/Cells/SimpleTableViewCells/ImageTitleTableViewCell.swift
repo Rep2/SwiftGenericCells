@@ -39,7 +39,7 @@ public class ImageTitleTableViewCell: UITableViewCell, ReusablePresenter {
         }
 
         viewModel.titleViewModel.apply(to: titleLabel)
-        viewModel.imageViewModel.apply(toImageView: customImageView)
+        viewModel.imageViewModel.apply(to: customImageView)
 
         accessoryType = viewModel.cellViewModel?.accessoryType ?? .none
     }
