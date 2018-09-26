@@ -1,4 +1,4 @@
-github "Rep2/ReusableDataSource" ~> 0.1
-github "Rep2/SwiftViewModels" ~> 0.3
+github "Rep2/ReusableDataSource" ~> 0.2
+github "Rep2/SwiftViewModels" ~> 0.4
 
 github "SnapKit/SnapKit" ~> 4.0

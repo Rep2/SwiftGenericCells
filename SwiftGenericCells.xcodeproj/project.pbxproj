@@ -11,7 +11,6 @@
 		F64F82DE2099D5E6006C809E /* SwiftGenericCells.h in Headers */ = {isa = PBXBuildFile; fileRef = F64F82D02099D5E6006C809E /* SwiftGenericCells.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F64F82EA2099DE86006C809E /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64F82E92099DE86006C809E /* SnapKit.framework */; };
 		F64F82F12099FC54006C809E /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F82F02099FC54006C809E /* TitleTableViewCell.swift */; };
-		F64F82F42099FC98006C809E /* TitleTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F82F32099FC98006C809E /* TitleTableViewCellTest.swift */; };
 		F64F82F62099FE0C006C809E /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64F82E92099DE86006C809E /* SnapKit.framework */; };
 		F64F8327209A2BA6006C809E /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F8326209A2BA6006C809E /* TitleCollectionViewCell.swift */; };
 		F68F1137209C6F7800BADC8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F1136209C6F7800BADC8D /* AppDelegate.swift */; };
@@ -77,7 +76,6 @@
 		F64F82DD2099D5E6006C809E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F64F82E92099DE86006C809E /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		F64F82F02099FC54006C809E /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
-		F64F82F32099FC98006C809E /* TitleTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCellTest.swift; sourceTree = "<group>"; };
 		F64F831F209A062E006C809E /* SwiftTryCatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTryCatch.framework; path = Carthage/Build/iOS/SwiftTryCatch.framework; sourceTree = "<group>"; };
 		F64F8326209A2BA6006C809E /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		F68F1134209C6F7800BADC8D /* SwiftGenericCellsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGenericCellsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,7 +170,6 @@
 		F64F82DA2099D5E6006C809E /* SwiftGenericCellsTests */ = {
 			isa = PBXGroup;
 			children = (
-				F64F82F22099FC6B006C809E /* SimpleTableViewCellsTests */,
 				F64F82DD2099D5E6006C809E /* Info.plist */,
 			);
 			path = SwiftGenericCellsTests;
@@ -197,14 +194,6 @@
 				F6D1B54720DD52D0006B0B59 /* SwitchTableViewCell.swift */,
 			);
 			path = SimpleTableViewCells;
-			sourceTree = "<group>";
-		};
-		F64F82F22099FC6B006C809E /* SimpleTableViewCellsTests */ = {
-			isa = PBXGroup;
-			children = (
-				F64F82F32099FC98006C809E /* TitleTableViewCellTest.swift */,
-			);
-			path = SimpleTableViewCellsTests;
 			sourceTree = "<group>";
 		};
 		F64F8325209A2B89006C809E /* SimpleCollectionViewCells */ = {
@@ -363,11 +352,11 @@
 				TargetAttributes = {
 					F64F82CC2099D5E6006C809E = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = "";
 					};
 					F64F82D52099D5E6006C809E = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = "";
 					};
 					F68F1133209C6F7800BADC8D = {
 						CreatedOnToolsVersion = 9.3;
@@ -500,7 +489,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F64F82F42099FC98006C809E /* TitleTableViewCellTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,7 +679,11 @@
 				INFOPLIST_FILE = SwiftGenericCells/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SwiftGenericCells;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -720,7 +712,11 @@
 				INFOPLIST_FILE = SwiftGenericCells/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SwiftGenericCells;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -741,7 +737,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SwiftGenericCellsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SwiftGenericCellsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -762,7 +762,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SwiftGenericCellsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SwiftGenericCellsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -782,7 +786,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SwiftGenericCellsDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SwiftGenericCellsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -802,7 +809,10 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = SwiftGenericCellsDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SwiftGenericCellsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -818,7 +828,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MDX989Y6D8;
 				INFOPLIST_FILE = SwiftGenericCellsDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SwiftGenericCellsDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -835,7 +849,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MDX989Y6D8;
 				INFOPLIST_FILE = SwiftGenericCellsDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rep.SwiftGenericCellsDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
