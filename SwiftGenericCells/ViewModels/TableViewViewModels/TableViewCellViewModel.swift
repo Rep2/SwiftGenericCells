@@ -7,4 +7,12 @@ public struct TableViewCellViewModel {
         self.accessoryType = accessoryType
         self.separator = separator
     }
+
+    public func apply(to cell: UITableViewCell) {
+        if let accessoryType = accessoryType {
+            cell.accessoryType = accessoryType
+        }
+
+        separator?.apply(to: cell)
+    }
 }
