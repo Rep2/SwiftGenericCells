@@ -41,7 +41,7 @@ public class ImageTitleTableViewCell: UITableViewCell, ReusablePresenter {
         viewModel.titleViewModel.apply(to: titleLabel)
         viewModel.imageViewModel.apply(to: customImageView)
 
-        accessoryType = viewModel.cellViewModel?.accessoryType ?? .none
+        viewModel.cellViewModel?.apply(to: self)
     }
 
     public func setupCell() {

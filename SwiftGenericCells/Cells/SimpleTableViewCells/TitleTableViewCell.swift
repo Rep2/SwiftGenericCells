@@ -29,7 +29,7 @@ public class TitleTableViewCell: UITableViewCell, ReusablePresenter {
 
         viewModel.titleViewModel.apply(to: titleLabel)
 
-        accessoryType = viewModel.cellViewModel?.accessoryType ?? .none
+        viewModel.cellViewModel?.apply(to: self)
     }
 
     public func setupCell() {
