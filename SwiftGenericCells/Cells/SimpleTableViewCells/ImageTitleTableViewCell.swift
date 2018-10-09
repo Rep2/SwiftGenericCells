@@ -17,7 +17,7 @@ public class ImageTitleTableViewCellViewModel {
 }
 
 open class ImageTitleTableViewCell: UITableViewCell, ReusablePresenter {
-    lazy var titleLabel: UILabel = {
+    public lazy var titleLabel: UILabel = {
         let label = UILabel()
 
         label.font = .systemFont(ofSize: 15)
@@ -25,7 +25,7 @@ open class ImageTitleTableViewCell: UITableViewCell, ReusablePresenter {
         return label
     }()
 
-    lazy var customImageView: UIImageView = {
+    public lazy var customImageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
 
         imageView.contentMode = .scaleAspectFit
