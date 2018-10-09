@@ -16,7 +16,7 @@ public class ImageTitleTableViewCellViewModel {
     }
 }
 
-public class ImageTitleTableViewCell: UITableViewCell, ReusablePresenter {
+open class ImageTitleTableViewCell: UITableViewCell, ReusablePresenter {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
 
@@ -33,7 +33,7 @@ public class ImageTitleTableViewCell: UITableViewCell, ReusablePresenter {
         return imageView
     }()
 
-    public func present(viewModel: ImageTitleTableViewCellViewModel) {
+    open func present(viewModel: ImageTitleTableViewCellViewModel) {
         if titleLabel.superview == nil {
             setupCell()
         }
@@ -44,17 +44,17 @@ public class ImageTitleTableViewCell: UITableViewCell, ReusablePresenter {
         viewModel.cellViewModel?.apply(to: self)
     }
 
-    public func setupCell() {
+    open func setupCell() {
         addSubviews()
         setupConstraints()
     }
 
-    public func addSubviews() {
+    open func addSubviews() {
         addSubview(customImageView)
         addSubview(titleLabel)
     }
 
-    public func setupConstraints() {
+    open func setupConstraints() {
         customImageView.snp.makeConstraints { make in
             make.left.top.bottom.equalToSuperview().inset(UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16))
             make.width.equalTo(customImageView.snp.height)
