@@ -1,11 +1,11 @@
 public struct TableViewCellViewModel {
     public let accessoryType: UITableViewCellAccessoryType?
 
-    public let separator: TableViewSeparator?
+    public let separators: [TableViewSeparator]
 
-    public init(accessoryType: UITableViewCellAccessoryType?, separator: TableViewSeparator? = nil) {
+    public init(accessoryType: UITableViewCellAccessoryType?, separators: [TableViewSeparator] = []) {
         self.accessoryType = accessoryType
-        self.separator = separator
+        self.separators = separators
     }
 
     public func apply(to cell: UITableViewCell) {
@@ -13,6 +13,6 @@ public struct TableViewCellViewModel {
             cell.accessoryType = accessoryType
         }
 
-        separator?.apply(to: cell)
+        separators.forEach { $0.apply(to: cell) }
     }
 }
