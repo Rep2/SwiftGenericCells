@@ -1,30 +1,34 @@
 import UIKit
 
 public enum TableViewSeparator {
-    case top
-    case bottom
-    case middle
+    case top(isInset: Bool)
+    case bottom(isInset: Bool)
 
     func apply(to view: UIView) {
         let separator = UIView.separator
         view.addSubview(separator)
 
+        let isInset: Bool
         switch self {
-        case .top:
+        case .top(let inset):
+            isInset = inset
+
             separator.snp.makeConstraints { make in
-                make.left.right.top.equalToSuperview()
-                make.height.equalTo(1)
+                make.top.equalToSuperview()
             }
-        case .bottom:
+        case .bottom(let inset):
+            isInset = inset
+
             separator.snp.makeConstraints { make in
-                make.left.right.bottom.equalToSuperview()
-                make.height.equalTo(1)
+                make.bottom.equalToSuperview()
             }
-        case .middle:
-            separator.snp.makeConstraints { make in
-                make.left.right.bottom.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0))
-                make.height.equalTo(1)
-            }
+        }
+
+        let inset = UIEdgeInsets(top: 0, left: isInset ? 16 : 0, bottom: 0, right: 0)
+
+        separator.snp.makeConstraints { make in
+            make.left.right.equalToSuperview().inset(inset)
+            make.height.equalTo(1)
         }
     }
 }

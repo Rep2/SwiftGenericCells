@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F63F3EDB2190270900E928CA /* ReusableDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F63F3EDA2190270900E928CA /* ReusableDataSource.framework */; };
 		F64F82D72099D5E6006C809E /* SwiftGenericCells.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64F82CD2099D5E6006C809E /* SwiftGenericCells.framework */; };
 		F64F82DE2099D5E6006C809E /* SwiftGenericCells.h in Headers */ = {isa = PBXBuildFile; fileRef = F64F82D02099D5E6006C809E /* SwiftGenericCells.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F64F82EA2099DE86006C809E /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64F82E92099DE86006C809E /* SnapKit.framework */; };
@@ -23,7 +24,6 @@
 		F68F115E209C71DE00BADC8D /* SwiftViewModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1155209C711900BADC8D /* SwiftViewModels.framework */; };
 		F68F1160209CACD700BADC8D /* ImageTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68F115F209CACD700BADC8D /* ImageTitleTableViewCell.swift */; };
 		F68F11D3209DB2BC00BADC8D /* SwiftViewModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F1155209C711900BADC8D /* SwiftViewModels.framework */; };
-		F68F11D5209DB2E900BADC8D /* ReusableDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F68F11D4209DB2E900BADC8D /* ReusableDataSource.framework */; };
 		F69D5045216C304200850EF7 /* TableViewSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69D5044216C304200850EF7 /* TableViewSeparator.swift */; };
 		F6B7FAE520E116490067CF72 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B7FAE420E116490067CF72 /* ImageCollectionViewCell.swift */; };
 		F6D1B54620DD4FDB006B0B59 /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D1B54520DD4FDB006B0B59 /* TableViewCellViewModel.swift */; };
@@ -70,6 +70,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F63F3EDA2190270900E928CA /* ReusableDataSource.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReusableDataSource.framework; path = Carthage/Build/iOS/ReusableDataSource.framework; sourceTree = "<group>"; };
 		F64F82CD2099D5E6006C809E /* SwiftGenericCells.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftGenericCells.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64F82D02099D5E6006C809E /* SwiftGenericCells.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftGenericCells.h; sourceTree = "<group>"; };
 		F64F82D12099D5E6006C809E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 		F64F82DD2099D5E6006C809E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F64F82E92099DE86006C809E /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		F64F82F02099FC54006C809E /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
-		F64F831F209A062E006C809E /* SwiftTryCatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTryCatch.framework; path = Carthage/Build/iOS/SwiftTryCatch.framework; sourceTree = "<group>"; };
 		F64F8326209A2BA6006C809E /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		F68F1134209C6F7800BADC8D /* SwiftGenericCellsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGenericCellsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68F1136209C6F7800BADC8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +89,6 @@
 		F68F114D209C6F7900BADC8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F68F1155209C711900BADC8D /* SwiftViewModels.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftViewModels.framework; path = Carthage/Build/iOS/SwiftViewModels.framework; sourceTree = "<group>"; };
 		F68F115F209CACD700BADC8D /* ImageTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleTableViewCell.swift; sourceTree = "<group>"; };
-		F68F11D4209DB2E900BADC8D /* ReusableDataSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReusableDataSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69D5044216C304200850EF7 /* TableViewSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSeparator.swift; sourceTree = "<group>"; };
 		F6B7FAE420E116490067CF72 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6D1B54520DD4FDB006B0B59 /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
@@ -101,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F68F11D5209DB2E900BADC8D /* ReusableDataSource.framework in Frameworks */,
+				F63F3EDB2190270900E928CA /* ReusableDataSource.framework in Frameworks */,
 				F64F82EA2099DE86006C809E /* SnapKit.framework in Frameworks */,
 				F68F11D3209DB2BC00BADC8D /* SwiftViewModels.framework in Frameworks */,
 			);
@@ -180,9 +179,8 @@
 		F64F82E82099DE86006C809E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F68F11D4209DB2E900BADC8D /* ReusableDataSource.framework */,
+				F63F3EDA2190270900E928CA /* ReusableDataSource.framework */,
 				F68F1155209C711900BADC8D /* SwiftViewModels.framework */,
-				F64F831F209A062E006C809E /* SwiftTryCatch.framework */,
 				F64F82E92099DE86006C809E /* SnapKit.framework */,
 			);
 			name = Frameworks;
