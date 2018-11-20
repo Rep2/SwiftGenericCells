@@ -1,4 +1,4 @@
-import ReusableDataSource
+import SimpleDataSource
 import SwiftViewModels
 import UIKit
 import SnapKit
@@ -9,6 +9,10 @@ public struct ImageCollectionViewCellViewModel {
     public init(imageViewModel: ImageViewModel) {
         self.imageViewModel = imageViewModel
     }
+}
+
+extension ImageCollectionViewCellViewModel: DequeuableCollectionViewCellViewModel {
+    public typealias CollectionViewCell = ImageCollectionViewCell
 }
 
 open class ImageCollectionViewCell: UICollectionViewCell {
@@ -32,7 +36,7 @@ open class ImageCollectionViewCell: UICollectionViewCell {
     }
 }
 
-extension ImageCollectionViewCell: ReusablePresenter {
+extension ImageCollectionViewCell: PresentingCollectionViewCell {
     public func present(viewModel: ImageCollectionViewCellViewModel) {
         if imageView.superview == nil {
             setupCell()

@@ -1,4 +1,4 @@
-import ReusableDataSource
+import SimpleDataSource
 import SwiftViewModels
 import SnapKit
 import UIKit
@@ -16,7 +16,11 @@ public class ImageTitleTableViewCellViewModel {
     }
 }
 
-open class ImageTitleTableViewCell: UITableViewCell, ReusablePresenter {
+extension ImageTitleTableViewCellViewModel: DequeuableTableViewCellViewModel {
+    public typealias TableViewCell = ImageTitleTableViewCell
+}
+
+open class ImageTitleTableViewCell: UITableViewCell, PresentingTableViewCell {
     public lazy var titleLabel: UILabel = {
         let label = UILabel()
 

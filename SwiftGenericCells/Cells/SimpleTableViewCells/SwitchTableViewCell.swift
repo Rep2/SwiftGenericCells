@@ -1,4 +1,4 @@
-import ReusableDataSource
+import SimpleDataSource
 import SwiftViewModels
 import SnapKit
 import UIKit
@@ -16,7 +16,11 @@ public class SwitchTableViewCellViewModel {
     }
 }
 
-public class SwitchTableViewCell: UITableViewCell, ReusablePresenter {
+extension SwitchTableViewCellViewModel: DequeuableTableViewCellViewModel {
+    public typealias TableViewCell = SwitchTableViewCell
+}
+
+public class SwitchTableViewCell: UITableViewCell, PresentingTableViewCell {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
 

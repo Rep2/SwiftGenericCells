@@ -1,9 +1,9 @@
 public struct TableViewCellViewModel {
-    public let accessoryType: UITableViewCellAccessoryType?
+    public let accessoryType: UITableViewCell.AccessoryType?
 
     public let separators: [TableViewSeparator]
 
-    public init(accessoryType: UITableViewCellAccessoryType?, separators: [TableViewSeparator] = []) {
+    public init(accessoryType: UITableViewCell.AccessoryType?, separators: [TableViewSeparator] = []) {
         self.accessoryType = accessoryType
         self.separators = separators
     }
